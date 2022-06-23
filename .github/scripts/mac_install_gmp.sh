@@ -12,6 +12,5 @@ if [ "$CIBW_ARCHS_MACOS" = "arm64" ]; then
   curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C arm-homebrew
   response=$(./arm-homebrew/bin/brew fetch --force --bottle-tag=arm64_big_sur gmp | grep "Downloaded to: " | cut -c 16-)
   echo $response
-  # parsed=($response)
   ./arm-homebrew/bin/brew install $response
 fi
