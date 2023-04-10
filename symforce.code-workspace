@@ -4,5 +4,24 @@
 			"path": "."
 		}
 	],
-	"settings": {}
+	"settings": {
+		"files.associations": {
+			"*.tcc": "cpp",
+			"*.lcm": "cpp"
+		}
+	},
+	"extensions": {
+		"recommendations": [
+			"jeff-hykin.better-cpp-syntax",
+			"ms-vscode.cpptools-extension-pack",
+			"twxs.cmake",
+			"josetr.cmake-language-support-vscode",
+			"ms-vscode.cmake-tools",
+			"ms-python.isort",
+			"wholroyd.jinja",
+			"ms-toolsai.jupyter",
+			"ms-python.pylint",
+			"ms-python.python"
+		]
+	}
 }
