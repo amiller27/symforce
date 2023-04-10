@@ -6,13 +6,22 @@
 	"image": "mcr.microsoft.com/devcontainers/universal:2-linux",
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
-	// "features": {},
+	"features": {
+		"ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {
+			"packages": "doxygen,libgmp-dev,pandoc"
+		},
+		"ghcr.io/akhildevelops/devcontainer-features/pip:0": {
+			// Dependencies of skymarshal.  Otherwise starting the build before postCreateCommand finishes
+			// fails
+			"packages": "argh jinja2 numpy ply six"
+		}
+	},
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "pip install -r dev_requirements.txt"
+	"postCreateCommand": "pip install --user -r dev_requirements.txt"
 
 	// Configure tool-specific properties.
 	// "customizations": {},
