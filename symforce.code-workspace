@@ -21,7 +21,8 @@
 			"wholroyd.jinja",
 			"ms-toolsai.jupyter",
 			"ms-python.pylint",
-			"ms-python.python"
+			"ms-python.python",
+			"brobeson.ctest-lab"
 		]
 	}
 }
